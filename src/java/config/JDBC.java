@@ -14,7 +14,7 @@ public class JDBC {
     }
 
     public void connect() {
-        String dbname = "mov_info";
+        String dbname = "movinfo";
         String username = "root";
         String password = "";
 
@@ -22,7 +22,7 @@ public class JDBC {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3307/" + dbname + "?useSSL=false&serverTimezone=UTC",
+                "jdbc:mysql://localhost:3306/" + dbname + "?useSSL=false&serverTimezone=UTC",
                 username,
                 password
             );

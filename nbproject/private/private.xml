@@ -3,8 +3,38 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/TubesPBO/web/index.jsp</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/TubesPBO/src/java/config/JDBC.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/config/JDBC.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/index.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/Akun.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/Film.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/Genre.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/Berita.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/Favorite.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/LikeBerita.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/model/ManajemenKonten.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/FilmService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/BeritaService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/GenreService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/FavoriteService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/LikeBeritaService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/service/AkunService.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/FilmController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/AuthController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/BeritaController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/FavoriteController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/LikeBeritaController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/GenreController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/admin/film/index.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/admin/film/add.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/admin/film/edit.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/admin/dashboard.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/admin/sidebar.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/DashboardController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/login.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/register.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/web/user/dashboard.jsp</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/LoginController.java</file>
+            <file>file:/C:/Users/nashw/Documents/acaswork/PBO%20TP/Tubes-PBO/src/java/controller/RegisterController.java</file>
         </group>
     </open-files>
 </project-private>
