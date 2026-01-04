@@ -4,15 +4,17 @@ public class Akun {
     private int idAkun;
     private String username;
     private String password;
+    private String email;
     private String role; // admin / pengguna
 
     public Akun() {}
 
-    public Akun(int idAkun, String username, String password, String role) {
+    public Akun(int idAkun, String username, String password, String role, String email) {
         this.idAkun = idAkun;
         this.username = username;
         this.password = password;
         this.role = role;
+        this.email = email;
     }
 
     public int getIdAkun() {
@@ -45,5 +47,13 @@ public class Akun {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -7,9 +7,9 @@ public class Film {
     private Integer tahunRilis;
     private String posterUrl;
     private String namaGenre;
-
-   
     private int genreId;
+    private double rating;
+    private String castFilm;
 
     
 
@@ -24,7 +24,7 @@ public class Film {
         this.namaGenre = namaGenre;
         this.genreId = genreId;
     }
- public int getGenreId() {
+    public int getGenreId() {
         return genreId;
     }
 
@@ -76,5 +76,33 @@ public class Film {
 
     public void setPosterUrl(String posterUrl) {
         this.posterUrl = posterUrl;
+    }
+    
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+    
+    public String getGenre() {
+        return this.namaGenre; // Mengembalikan nilai dari namaGenre yang sudah ada
+    }
+
+    public void setGenre(String genre) {
+        this.namaGenre = genre; // Menyimpan ke variable namaGenre yang sudah ada
+    }
+    
+    public String getCastFilm() {
+        // Kalau null (kosong), kita kembalikan strip (-) biar tidak error di layar
+        if (castFilm == null) {
+            return "-";
+        }
+        return castFilm;
+    }
+    
+    public void setCastFilm(String castFilm) {
+        this.castFilm = castFilm;
     }
 }

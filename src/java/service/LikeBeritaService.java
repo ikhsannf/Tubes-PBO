@@ -81,4 +81,27 @@ public class LikeBeritaService {
 
         return false;
     }
+    
+    public boolean isLiked(int idAkun, int idBerita) {
+        JDBC db = new JDBC();
+        boolean status = false;
+        try {
+            db.connect();
+            Connection con = db.getConnection();
+            
+            String sql = "SELECT idLike FROM likeberita WHERE idAkun=? AND idBerita=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            
+            pst.setInt(1, idAkun);
+            pst.setInt(2, idBerita);
+            
+            ResultSet rs = pst.executeQuery();
+            if(rs.next()) {
+                status = true; // Ada datanya, berarti sudah like
+            }
+            
+        } catch (Exception e) { e.printStackTrace(); }
+        
+        return status;
+    }
 }

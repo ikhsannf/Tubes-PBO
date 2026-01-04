@@ -1,6 +1,5 @@
 package controller;
 
-import model.Akun;
 import service.AkunService;
 
 import javax.servlet.ServletException;
@@ -10,26 +9,36 @@ import java.io.IOException;
 
 @WebServlet("/register")
 public class RegisterController extends HttpServlet {
-    private AkunService akunService = new AkunService();
+
+    private final AkunService akunService = new AkunService();
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+
+        String email = req.getParameter("email");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-         // Misalnya role: 'user' atau 'admin'
 
-        Akun newUser = new Akun();
-        newUser.setUsername(username);
-        newUser.setPassword(password);
-        
+        int result = akunService.register(email, username, password);
 
-        boolean isRegistered = akunService.register(newUser);
+        if (result == AkunService.REGISTER_SUCCESS) {
+            // Sukses, arahkan ke login dengan pesan sukses (opsional simpan di session)
+            resp.sendRedirect("login.jsp");
+            return;
+        }
 
-        if (isRegistered) {
-            resp.sendRedirect("login.jsp"); // Redirect ke login setelah registrasi sukses
+        // Handle Error
+        if (result == AkunService.REGISTER_DUPLICATE) {
+            req.setAttribute("error", "Email atau username sudah terdaftar.");
+        } else if (result == AkunService.REGISTER_INVALID_USERNAME) {
+            req.setAttribute("error", "Username tidak boleh mengandung spasi/kosong.");
+        } else if (result == AkunService.REGISTER_INVALID_PASSWORD) {
+            req.setAttribute("error", "Password minimal 8 karakter.");
         } else {
             req.setAttribute("error", "Registrasi gagal.");
-            req.getRequestDispatcher("register.jsp").forward(req, resp); // Kembali ke halaman registrasi dengan pesan error
         }
+
+        req.getRequestDispatcher("register.jsp").forward(req, resp);
     }
 }

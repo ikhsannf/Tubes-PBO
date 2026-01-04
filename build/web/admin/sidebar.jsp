@@ -22,21 +22,9 @@
                 <i class="fas fa-home"></i> <span>Beranda</span>
             </a>
             
-            <!-- Film Menu dengan Submenu -->
-            <div class="menu-item <%= (currentURI.contains("/film") || currentURI.contains("/genre")) ? "active" : "" %>">
-                <a href="#" class="parent-menu" onclick="toggleSubmenu(this)">
-                    <i class="fas fa-film"></i> <span>Film</span>
-                    <i class="fas fa-chevron-down arrow"></i>
-                </a>
-                <div class="submenu" style="<%= (currentURI.contains("/film") || currentURI.contains("/genre")) ? "display: block;" : "display: none;" %>">
-                    <a href="<%= contextPath %>/film" class="<%= currentURI.contains("/film") && !currentURI.contains("genre") ? "active" : "" %>">
-                        <i class="fas fa-list"></i> Data Film
-                    </a>
-                    <a href="<%= contextPath %>/genre" class="<%= currentURI.contains("/genre") ? "active" : "" %>">
-                        <i class="fas fa-tags"></i> Data Genre
-                    </a>
-                </div>
-            </div>
+            <a href="<%= contextPath %>/film" class="<%= currentURI.contains("/film") ? "active" : "" %>">
+                <i class="fas fa-film"></i> <span>Film</span>
+            </a>
             
             <a href="<%= contextPath %>/berita" class="<%= currentURI.contains("/berita") ? "active" : "" %>">
                 <i class="fas fa-newspaper"></i> <span>Berita</span>

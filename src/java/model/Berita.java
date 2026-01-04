@@ -9,16 +9,23 @@ public class Berita {
     private Date tanggal;
     private String penulis;
     private int idAdmin;
+    private String gambarUrl;
 
     public Berita() {}
 
-    public Berita(int idBerita, String judul, String isi, Date tanggal, String penulis, int idAdmin) {
+    public Berita(int idBerita, String judul, String isi, Date tanggal, String penulis, int idAdmin, String gambarUrl) {
         this.idBerita = idBerita;
         this.judul = judul;
         this.isi = isi;
         this.tanggal = tanggal;
         this.penulis = penulis;
         this.idAdmin = idAdmin;
+        this.gambarUrl = gambarUrl;
+    }
+
+    // Constructor lama untuk kompatibilitas jika diperlukan (opsional)
+    public Berita(int idBerita, String judul, String isi, Date tanggal, String penulis, int idAdmin) {
+        this(idBerita, judul, isi, tanggal, penulis, idAdmin, null);
     }
 
     public int getIdBerita() {
@@ -67,5 +74,13 @@ public class Berita {
 
     public void setIdAdmin(int idAdmin) {
         this.idAdmin = idAdmin;
+    }
+
+    public String getGambarUrl() {
+        return gambarUrl;
+    }
+
+    public void setGambarUrl(String gambarUrl) {
+        this.gambarUrl = gambarUrl;
     }
 }

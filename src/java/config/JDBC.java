@@ -37,7 +37,7 @@ public class JDBC {
         }
     }
 
-    private void disconnect() {
+    public void disconnect() {
         try {
             if (stmt != null) stmt.close();
             if (con != null) con.close();

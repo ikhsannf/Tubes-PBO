@@ -175,7 +175,7 @@
             <div class="input-group">
                 <div class="input-wrapper">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="password" placeholder="Buat Kata Sandi" required />
+                    <input type="password" name="password" placeholder="Buat Kata Sandi" minlength="8" required />
                 </div>
             </div>
 

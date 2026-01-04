@@ -21,18 +21,35 @@ public class LikeBeritaController extends HttpServlet {
         HttpSession session = req.getSession();
         Akun user = (Akun) session.getAttribute("user");
 
+        // 1. Cek Login
         if (user == null) {
-            resp.sendRedirect("login.jsp");
+            // Jika belum login, arahkan ke login.jsp (asumsi login.jsp ada di luar/root)
+            resp.sendRedirect(req.getContextPath() + "/login.jsp"); 
             return;
         }
 
+        // 2. Ambil Data
         int beritaId = Integer.parseInt(req.getParameter("beritaId"));
+        int userId = user.getIdAkun();
 
-        LikeBerita like = new LikeBerita();
-        like.setIdAkun(user.getIdAkun());
-        like.setIdBerita(beritaId);
+        // 3. LOGIKA TOGGLE (BOLAK-BALIK)
+        // Cek apakah user sudah like sebelumnya?
+        boolean isLiked = service.isLiked(userId, beritaId);
+        String status = "";
 
-        service.like(like.getIdAkun(), like.getIdBerita());
-        resp.sendRedirect("user/berita.jsp");
+        if (isLiked) {
+            service.unlike(userId, beritaId); // Hapus like
+            status = "UNLIKED";
+        } else {
+            service.like(userId, beritaId);   // Tambah like
+            status = "LIKED";
+        }
+
+        // 4. Hitung Total Likes Terbaru
+        int newCount = service.getLikesByBerita(beritaId).size();
+
+        // 5. Kirim Response ke Client (AJAX)
+        resp.setContentType("text/plain");
+        resp.getWriter().write(status + ":" + newCount);
     }
 }

@@ -352,6 +352,8 @@
                         String posterUrl = film.getPosterUrl();
                         if (posterUrl == null || posterUrl.trim().isEmpty()) {
                             posterUrl = "https://i.ibb.co/3sW5bM8/placeholder-poster.png";
+                        } else {
+                            posterUrl = request.getContextPath() + "/uploads/posters/" + posterUrl;
                         }
                     %>
                     <img src="<%= posterUrl %>" alt="<%= film.getJudul() %>" class="film-poster" 
